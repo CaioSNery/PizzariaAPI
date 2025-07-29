@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Pizzaria.Data;
 using Pizzaria.Interface;
@@ -13,10 +14,13 @@ namespace Pizzaria.Services
     {
         private readonly AppDbContext _context;
         private readonly ISMSService _smsService;
-        public VendaService(AppDbContext context, ISMSService smsService)
+
+        private readonly IMapper _mapper;
+        public VendaService(AppDbContext context, ISMSService smsService, IMapper mapper)
         {
             _context = context;
             _smsService = smsService;
+            _mapper = mapper;
         }
         public async Task<IEnumerable<Vendas>> ObterVendasAsync()
         {
@@ -35,23 +39,16 @@ namespace Pizzaria.Services
         public async Task<object> RealizarVendaAsync(VendaDTO dto)
         {
             var cliente = await _context.Clientes.FirstOrDefaultAsync(c => c.Nome.ToLower() == dto.NomeCliente.ToLower());
-            var pizza = await _context.Pizza.FirstOrDefaultAsync(p => p.Sabor == dto.IdPizza);
-
             if (cliente == null) return "Cliente nao encontrado";
+
+
+            var pizza = await _context.Pizzas.FirstOrDefaultAsync(p => p.Sabor.ToLower() == dto.SaborPizza.ToLower());
             if (pizza == null) return "Sabor nao encontrado";
 
             decimal ValorFinal = pizza.ValorPizza * dto.Quantidade;
 
-            var venda = new Vendas
-            {
-                ClienteId=cliente.Id,
-                PizzaId=pizza.Id,
-                NomeCliente = cliente.Nome,
-                SaborPizza = pizza.Sabor,
-                ValorTotal = ValorFinal,
-                DataVenda = dto.DateVenda,
-                Quantidade=dto.Quantidade
-            };
+            var venda = _mapper.Map<Vendas>(dto);
+            
 
             _context.Vendas.Add(venda);
             await _context.SaveChangesAsync();

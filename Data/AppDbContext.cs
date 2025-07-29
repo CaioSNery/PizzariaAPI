@@ -12,7 +12,7 @@ namespace Pizzaria.Data
         public AppDbContext(DbContextOptions options) : base(options) { }
         public DbSet<Vendas> Vendas { get; set; }
         public DbSet<Clientes> Clientes { get; set; }
-        public DbSet<Pizza> Pizza { get; set; }
+        public DbSet<Pizza> Pizzas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

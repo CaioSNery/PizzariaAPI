@@ -39,7 +39,7 @@ namespace Pizzaria.Controller
         }
 
         
-        [HttpGet("id")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetIdVendas(int id)
         {
             var venda = await _service.ObterVendasPorIdAsync(id);

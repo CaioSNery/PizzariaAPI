@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -7,6 +8,7 @@ using Pizzaria.Data;
 using Pizzaria.Interface;
 using Pizzaria.Services;
 using Pizzaria.Settings;
+using PizzariaAPI.Mappings;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +19,8 @@ builder.Services.AddControllers();
 builder.Services.Configure<TwilioSettings>(builder.Configuration.GetSection("TwilioSettings"));
 builder.Services.AddScoped<ISMSService, SMSService>();
 builder.Services.AddScoped<IVendaService, VendaService>();
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
+
 
 
 var app = builder.Build();

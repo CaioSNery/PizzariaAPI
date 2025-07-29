@@ -22,7 +22,7 @@ namespace Pizzaria.Controller
         [HttpPost]
         public async Task<ActionResult<Pizza>> AddPizza(Pizza pizza)
         {
-            _appDb.Pizza.Add(pizza);
+            _appDb.Pizzas.Add(pizza);
             await _appDb.SaveChangesAsync();
 
             return Ok(pizza);
@@ -30,14 +30,14 @@ namespace Pizzaria.Controller
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Pizza>>> BuscarPizzas()
         {
-            var pizza = await _appDb.Pizza.ToListAsync();
+            var pizza = await _appDb.Pizzas.ToListAsync();
             return Ok(pizza);
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Pizza>> BuscarPizzaId(int id)
         {
-            var pizza = await _appDb.Pizza.FindAsync(id);
+            var pizza = await _appDb.Pizzas.FindAsync(id);
             if (pizza == null) return NotFound();
             return Ok(pizza);
         }
@@ -47,7 +47,7 @@ namespace Pizzaria.Controller
         {
             if (id != pizzaup.Id) return BadRequest();
 
-            _appDb.Pizza.Update(pizzaup);
+            _appDb.Pizzas.Update(pizzaup);
             await _appDb.SaveChangesAsync();
 
             return NoContent();
@@ -56,10 +56,10 @@ namespace Pizzaria.Controller
         [HttpDelete("{id}")]
         public async Task<ActionResult<Pizza>> DeletePizza(int id)
         {
-            var pizza = _appDb.Pizza.Find(id);
+            var pizza = _appDb.Pizzas.Find(id);
             if (pizza == null) return NotFound();
 
-            _appDb.Pizza.Remove(pizza);
+            _appDb.Pizzas.Remove(pizza);
             await _appDb.SaveChangesAsync();
 
             return NoContent();
