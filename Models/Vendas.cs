@@ -8,17 +8,14 @@ namespace Pizzaria.Models
     public class Vendas
     {
         public int Id { get; set; }
-        
+
         public int ClienteId { get; set; }
         public Clientes Cliente { get; set; }
-        public required string NomeCliente { get; set; }
 
         public int PizzaId { get; set; }
+        public Pizza Pizza { get; set; }
 
-        public Pizza Pizza{ get; set; }
-        public required string SaborPizza { get; set; }
-        public int Quantidade { get; set; }
-        public decimal  ValorTotal { get; set; }
+        public decimal ValorTotal { get; set; }
         public DateTime DataVenda { get; set; } = DateTime.Now;
     }
 }

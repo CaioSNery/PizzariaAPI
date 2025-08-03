@@ -19,11 +19,14 @@ namespace Pizzaria.Map
 
             builder.Property(p => p.Sabor).IsRequired();
 
-            builder.Property(p=>p.ValorPizza).IsRequired();
+            builder.Property(p => p.ValorPizza).IsRequired();
 
-    
+            builder.Property(p => p.ValorPizza)
+            .HasColumnType("decimal(18,2)");
+
+
         }
 
-        
+
     }
 }

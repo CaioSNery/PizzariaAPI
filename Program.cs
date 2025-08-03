@@ -21,7 +21,7 @@ builder.Services.AddScoped<ISMSService, SMSService>();
 builder.Services.AddScoped<IVendaService, VendaService>();
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
-
+// =tcp:sistemaapis.database.windows.net,1433;Initial Catalog=DeliveryDB;Persist Security Info=False;User ID=adminsql;Password=Cc000000;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
 
 var app = builder.Build();
 

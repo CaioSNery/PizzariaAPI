@@ -7,10 +7,10 @@ namespace Pizzaria.Models
 {
     public class VendaDTO
     {
-        public string NomeCliente { get; set; }
-        public string SaborPizza { get; set; } 
-        public int Quantidade { get; set; } 
-        public DateTime DateVenda { get; set; } = DateTime.Now;
+        public int ClienteId { get; set; }
+        public int PizzaId { get; set; }
+        public int Quantidade { get; set; }
+        public DateTime DataVenda { get; set; } = DateTime.Now;
 
     }
 }

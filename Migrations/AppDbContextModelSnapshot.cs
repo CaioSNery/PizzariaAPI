@@ -83,17 +83,8 @@ namespace Pizzaria.Migrations
                     b.Property<DateTime>("DataVenda")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("NomeCliente")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("PizzaId")
                         .HasColumnType("int");
-
-                    b.Property<int>("Quantidade")
-                        .HasColumnType("int");
-
-                    b.Property<string>("SaborPizza")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("ValorTotal")
                         .HasColumnType("decimal(18,2)");

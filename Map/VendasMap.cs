@@ -26,6 +26,9 @@ namespace Pizzaria.Map
             .WithMany()
             .HasForeignKey(v => v.PizzaId)
             .OnDelete(DeleteBehavior.Cascade);
+
+            builder.Property(v => v.ValorTotal)
+            .HasColumnType("decimal(18,2)");
         }
     }
 }

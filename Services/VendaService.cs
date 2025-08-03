@@ -38,17 +38,20 @@ namespace Pizzaria.Services
 
         public async Task<object> RealizarVendaAsync(VendaDTO dto)
         {
-            var cliente = await _context.Clientes.FirstOrDefaultAsync(c => c.Nome.ToLower() == dto.NomeCliente.ToLower());
+            var cliente = await _context.Clientes.FirstOrDefaultAsync(c => c.Id == dto.ClienteId);
             if (cliente == null) return "Cliente nao encontrado";
 
 
-            var pizza = await _context.Pizzas.FirstOrDefaultAsync(p => p.Sabor.ToLower() == dto.SaborPizza.ToLower());
+            var pizza = await _context.Pizzas.FirstOrDefaultAsync(p => p.Id == dto.PizzaId);
             if (pizza == null) return "Sabor nao encontrado";
 
             decimal ValorFinal = pizza.ValorPizza * dto.Quantidade;
 
             var venda = _mapper.Map<Vendas>(dto);
-            
+
+            venda.ValorTotal = ValorFinal;
+            venda.DataVenda = DateTime.Now;
+
 
             _context.Vendas.Add(venda);
             await _context.SaveChangesAsync();
@@ -60,13 +63,12 @@ namespace Pizzaria.Services
             }
 
             return new
-                {
-                    mensagem = "Pedido criado com Sucesso!",
-                    clientes = cliente.Nome,
-                    pizza = pizza.Sabor,
-                    quantidade = venda.Quantidade,
-                    valorTotal = ValorFinal
-                };
+            {
+                mensagem = "Pedido criado com Sucesso!",
+                clientes = cliente.Nome,
+                pizza = pizza.Sabor,
+                valorTotal = ValorFinal
+            };
 
         }
     }

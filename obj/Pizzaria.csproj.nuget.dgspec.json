@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\PizzariaAPI\\Pizzaria.csproj": {}
+    "C:\\Projetos\\Pizzaria\\PizzariaAPI\\Pizzaria.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\PizzariaAPI\\Pizzaria.csproj": {
+    "C:\\Projetos\\Pizzaria\\PizzariaAPI\\Pizzaria.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\PizzariaAPI\\Pizzaria.csproj",
+        "projectUniqueName": "C:\\Projetos\\Pizzaria\\PizzariaAPI\\Pizzaria.csproj",
         "projectName": "Pizzaria",
-        "projectPath": "C:\\Projetos\\PizzariaAPI\\Pizzaria.csproj",
+        "projectPath": "C:\\Projetos\\Pizzaria\\PizzariaAPI\\Pizzaria.csproj",
         "packagesPath": "C:\\Users\\computador\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\PizzariaAPI\\obj\\",
+        "outputPath": "C:\\Projetos\\Pizzaria\\PizzariaAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\computador\\AppData\\Roaming\\NuGet\\NuGet.Config"

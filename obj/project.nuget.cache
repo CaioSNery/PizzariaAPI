@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Rw/Tnh74eXM=",
+  "dgSpecHash": "RdQimVNDOX8=",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\PizzariaAPI\\Pizzaria.csproj",
+  "projectFilePath": "C:\\Projetos\\Pizzaria\\PizzariaAPI\\Pizzaria.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\computador\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\computador\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
