@@ -1,10 +1,17 @@
 C:\Projetos\APIPizzaria\Pizzaria\bin\Release\net8.0\publish\Pizzaria.exe
+C:\Projetos\APIPizzaria\Pizzaria\bin\Release\net8.0\publish\publish\web.config
 C:\Projetos\APIPizzaria\Pizzaria\bin\Release\net8.0\publish\appsettings.Development.json
 C:\Projetos\APIPizzaria\Pizzaria\bin\Release\net8.0\publish\appsettings.json
+C:\Projetos\APIPizzaria\Pizzaria\bin\Release\net8.0\publish\publish\appsettings.Development.json
+C:\Projetos\APIPizzaria\Pizzaria\bin\Release\net8.0\publish\publish\appsettings.json
+C:\Projetos\APIPizzaria\Pizzaria\bin\Release\net8.0\publish\publish\Pizzaria.deps.json
+C:\Projetos\APIPizzaria\Pizzaria\bin\Release\net8.0\publish\publish\Pizzaria.runtimeconfig.json
 C:\Projetos\APIPizzaria\Pizzaria\bin\Release\net8.0\publish\Pizzaria.dll
 C:\Projetos\APIPizzaria\Pizzaria\bin\Release\net8.0\publish\Pizzaria.deps.json
 C:\Projetos\APIPizzaria\Pizzaria\bin\Release\net8.0\publish\Pizzaria.runtimeconfig.json
 C:\Projetos\APIPizzaria\Pizzaria\bin\Release\net8.0\publish\Pizzaria.pdb
+C:\Projetos\APIPizzaria\Pizzaria\bin\Release\net8.0\publish\AutoMapper.dll
+C:\Projetos\APIPizzaria\Pizzaria\bin\Release\net8.0\publish\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Projetos\APIPizzaria\Pizzaria\bin\Release\net8.0\publish\Azure.Core.dll
 C:\Projetos\APIPizzaria\Pizzaria\bin\Release\net8.0\publish\Azure.Identity.dll
 C:\Projetos\APIPizzaria\Pizzaria\bin\Release\net8.0\publish\Humanizer.dll

@@ -5864,19 +5864,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\computador\\.nuget\\packages\\": {}
+    "C:\\Users\\Caio Nery\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projetos\\Pizzaria\\PizzariaAPI\\Pizzaria.csproj",
+      "projectUniqueName": "C:\\Projetos\\APIPizzaria\\Pizzaria\\Pizzaria.csproj",
       "projectName": "Pizzaria",
-      "projectPath": "C:\\Projetos\\Pizzaria\\PizzariaAPI\\Pizzaria.csproj",
-      "packagesPath": "C:\\Users\\computador\\.nuget\\packages\\",
-      "outputPath": "C:\\Projetos\\Pizzaria\\PizzariaAPI\\obj\\",
+      "projectPath": "C:\\Projetos\\APIPizzaria\\Pizzaria\\Pizzaria.csproj",
+      "packagesPath": "C:\\Users\\Caio Nery\\.nuget\\packages\\",
+      "outputPath": "C:\\Projetos\\APIPizzaria\\Pizzaria\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\computador\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Caio Nery\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -5957,7 +5957,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.410/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.412/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

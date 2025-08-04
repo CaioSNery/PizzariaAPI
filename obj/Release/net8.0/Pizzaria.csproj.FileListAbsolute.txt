@@ -294,3 +294,10 @@ C:\Projetos\Pizzaria\PizzariaAPI\obj\Release\net8.0\refint\Pizzaria.dll
 C:\Projetos\Pizzaria\PizzariaAPI\obj\Release\net8.0\Pizzaria.pdb
 C:\Projetos\Pizzaria\PizzariaAPI\obj\Release\net8.0\Pizzaria.genruntimeconfig.cache
 C:\Projetos\Pizzaria\PizzariaAPI\obj\Release\net8.0\ref\Pizzaria.dll
+C:\Projetos\APIPizzaria\Pizzaria\bin\Release\net8.0\publish\web.config
+C:\Projetos\APIPizzaria\Pizzaria\bin\Release\net8.0\publish\appsettings.Development.json
+C:\Projetos\APIPizzaria\Pizzaria\bin\Release\net8.0\publish\appsettings.json
+C:\Projetos\APIPizzaria\Pizzaria\bin\Release\net8.0\publish\Pizzaria.deps.json
+C:\Projetos\APIPizzaria\Pizzaria\bin\Release\net8.0\publish\Pizzaria.runtimeconfig.json
+C:\Projetos\APIPizzaria\Pizzaria\bin\Release\net8.0\AutoMapper.dll
+C:\Projetos\APIPizzaria\Pizzaria\bin\Release\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
