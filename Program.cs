@@ -12,7 +12,9 @@ using PizzariaAPI.Mappings;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+builder.Services.AddDbContext<AppDbContext>(options => 
+options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
@@ -24,6 +26,15 @@ builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 // =tcp:sistemaapis.database.windows.net,1433;Initial Catalog=DeliveryDB;Persist Security Info=False;User ID=adminsql;Password=Cc000000;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+    // Cria o banco e as tabelas se não existirem
+    db.Database.Migrate();
+}
+
 
 app.UseHttpsRedirection();
 
